@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website 🌐 ©®</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f0f0f; /* Deep Dark Background */
+            color: #FFB6C1;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Background Stickers */
+        .bg-sticker {
+            position: fixed;
+            width: 60px;
+            opacity: 0.15; /* Halka sa dikhega background mein */
+            z-index: -1;
+            animation: float-bg 6s infinite ease-in-out;
+        }
+
+        @keyframes float-bg {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Password Screen */
+        #search-box {
+            text-align: center;
+            z-index: 10;
+        }
+
+        input {
+            padding: 12px;
+            width: 240px;
+            border-radius: 25px;
+            border: 2px solid #FF69B4;
+            background: transparent;
+            color: white;
+            text-align: center;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px 30px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(45deg, #FF69B4, #FFB6C1);
+            color: black;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+        }
+
+        /* Content Styling */
+        #content {
+            display: none;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Slow Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 2s ease; /* Bohot pyara slow effect */
+            margin-bottom: 20px;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2.title {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            color: #fff;
+            text-shadow: 0 0 15px #FF69B4;
+        }
+
+        .line {
+            height: 1px;
+            background: linear-gradient(to right, transparent, gray, transparent);
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .nav-item { font-sjize: 1.3rem; letter-spacing: 2px; font-weight: 600; }
+        .neon { color: #fff; text-shadow: 0 0 10px #FFB6C1; }
+        .msg { color: #ccc; line-height: 1.8; font-size: 1rem; }
+
+    </style>
+</head>
+<body>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/5024/5024467.png" class="bg-sticker" style="top:10%; left:5%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/944/944458.png" class="bg-sticker" style="top:70%; left:80%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/3132/3132731.png" class="bg-sticker" style="top:20%; right:10%;">
+    <img src="https://cdn-icons-png.flaticon.com/512/2454/2454282.png" class="bg-sticker" style="bottom:10%; left:15%;">
+
+    <div id="search-box">
+        <h2 style="color: #FFB6C1;">Enter Secret Word</h2>
+        <input type="text" id="pass" placeholder="Type here...">
+        <br>
+        <button onclick="unlock()">Unlock Surprise</button>
+    </div>
+
+    <div id="content">
+        
+        <div class="reveal" id="r1">
+            <h2 class="title">Happy Birthday Meri Jan</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r2">
+            <div class="nav-item">🅜🅨 🅛🅞🅥🅔</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r3">
+            <div class="nav-item">🅜🅨 🅢🅦🅔🅔🅗🅔🅐🅡🅗</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r4">
+            <div class="nav-item neon">🅖🅨🅘🅖🅘</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r5">
+            <div class="nav-item">🅜🅨 🅕🅔🅐🅣🅤🅡🅔 🅦🅘🅕🅔</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r6">
+            <div style="font-size: 2rem;">❤️ 😘 💕</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r7">
+            <div class="neon" style="font-size: 1.4rem;">ȞÄPPŸ BÏŖȚȞĐÄŸ MËŖÏ ĴÄŅ</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r8">
+            <div class="msg">
+                [I Always pray to Allah for you health and wishes.<br>
+                May you live for thousands and millions of years,<br>
+                may you always be happy, may you never lose anything].
+            </div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r9">
+            <div class="neon">{16 ᶠᵉᵇʳᵘᵃʳʸ 2026}</div>
+            <div class="line"></div>
+        </div>
+
+        <div class="reveal" id="r10">
+            <div class="msg">
+                May this day, February 16, 2026, be the best for you.<br>
+                May this day be filled with so much happiness that you<br>
+                will always remember it.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function unlock() {
+            var val = document.getElementById("pass").value;
+            if (val === "Happy Birthday Gyidi") {
+                document.getElementById("search-box").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                
+                // Ek ek karke lines ko slow slow reveal karna
+                for (let i = 1; i <= 10; i++) {
+                    setTimeout(() => {
+                        document.getElementById('r' + i).classList.add('active');
+                    }, i * 1200); // 1.2 second ka gap har line ke beech
+                }
+            } else {
+                alert("Incorrect! Hint: Happy Birthday Gyidi");
+            }
+        }
+    </script>
+
+</body>
+</html>
